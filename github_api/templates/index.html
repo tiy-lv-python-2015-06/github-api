@@ -1,0 +1,37 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{% static "site-style.css" %}"/>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="column">
+        <ul>
+            <img id="avatar" src="{{ avatar_url }}" >
+
+            <li>{{ login }}</li>
+
+            <li>{{ name }}</li>
+
+            <li>{{ location }}</li>
+
+            <li>{{ public_repos }}</li>
+        </ul>
+    </div>
+<ul>
+{% for repo in repo_things %}
+    <li>{{ repo.name }}</li>
+
+    <li>{{ repo.description }}</li>
+
+    <li>{{ repo.updated_at }}</li>
+
+    <li>{{ repo.url }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
