@@ -1,0 +1,135 @@
+/** {border: solid 1px red}*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #0094de;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+#avatar{
+    border-radius: 6px
+}
+
+.column {
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.container {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+.three-fourths {
+    width: 75%;
+
+}
+
+.user-names {
+    margin-top: 5px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.fullname {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 26px;
+    line-height: 30px;
+    text-overflow: ellipsis;
+}
+
+.username {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    text-overflow: ellipsis;
+}
+
+.user-details {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #eee;
+}
+
+.user-detail {
+    width: 100%;
+    padding: 2px 0 2px 24px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    text-overflow: ellipsis;
+}
+
+.user-join {
+    width: 100%;
+    padding: 0px 0 0px 5px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    text-overflow: ellipsis;
+}
+
+ul, ol {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+}
+
+.repo-list-detail {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+
+.repo-list {
+    position: relative;
+}
+
+.repo-detail-name {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
