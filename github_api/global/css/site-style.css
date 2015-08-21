@@ -1,0 +1,35 @@
+/** {*/
+    /*border: 1px solid red;*/
+/*}*/
+
+.profile {
+    padding: 10px 15% 10px 15%;
+}
+
+.left-bar{
+    display: inline-block;
+    width: 250px;
+    padding: 0 30px 0 0;
+}
+
+.border-bottom{
+    border-bottom: solid lightgrey;
+}
+
+#avatar{
+    border-radius: 6px;
+    height: 250px;
+    width: 250px;
+}
+
+#name {
+    padding: 0 0 30px 0;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom: solid lightgrey;
+}
+
+#repos {
+    display: inline-block;
+    width: 60%;
+}
