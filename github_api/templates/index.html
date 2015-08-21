@@ -1,37 +1,43 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="{% static "site-style.css" %}"/>
 <head>
+    <link rel="stylesheet" href="{% static "site-style.css" %}"/>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Aaron Pentz</title>
 </head>
 <body>
-    <div class="column">
-        <ul>
-            <img id="avatar" src="{{ avatar_url }}" >
+<div class="container">
+    <div class="one-fourth column">
+            <img id="avatar" src="{{ avatar_url }}" height="230" width="230" >
 
-            <li>{{ login }}</li>
-
-            <li>{{ name }}</li>
-
-            <li>{{ location }}</li>
-
-            <li>{{ public_repos }}</li>
+            <h1 class="user-names">
+                <span class="fullname">{{ name }}</span>
+                <span class="username">{{ login }}</span>
+            </h1>
+        <ul class="user-details">
+            <li><span class="user-detail">{{ location }}</span></li>
+{#            <span class="user-detail">{{ created_at }}</span>#}
+            <li><span class="user-detail">Joined on</span>
+                    <time class="user-join" {{ created_at }}>Jun 16, 2015</time>
+            </li>
         </ul>
     </div>
-<ul>
+<div class="three-fourths column">
+<ul class="repo-list">
 {% for repo in repo_things %}
-    <li>{{ repo.name }}</li>
+    <li class="repo-list-detail">
+        <h3 class="repo-detail-name">
+            <a href="{{ repo.url }}">{{ repo.name }}</a>
+        </h3>
+        <p>{{ repo.description }}</p>
+        <p>Updated at {{ repo.updated_at }}</p>
+    </li>
 
-    <li>{{ repo.description }}</li>
-
-    <li>{{ repo.updated_at }}</li>
-
-    <li>{{ repo.url }}</li>
 {% endfor %}
 </ul>
+</div>
+</div>
 </body>
 </html>
