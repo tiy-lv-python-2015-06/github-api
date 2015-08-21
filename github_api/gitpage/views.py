@@ -5,11 +5,7 @@ from django.shortcuts import render, render_to_response
 import requests
 
 
-def get_profile(request):
-    response = requests.get('https://api.github.com/users/Apentz49').json()
-    response['repo_things'] = requests.get('https://api.github.com/users/Apentz49/repos').json()
+def get_profile(request, username):
+    response = requests.get('https://api.github.com/users/{}'.format(username)).json()
+    response['repo_things'] = requests.get('https://api.github.com/users/{}/repos'.format(username)).json()
     return render_to_response(template_name='index.html', context=response)
-
-
-# 'https://api.github.com/users/Apentz49/repos'
-# 'https://api.github.com/users/Apentz49'

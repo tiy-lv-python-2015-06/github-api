@@ -3,5 +3,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'gitpage.views.get_profile')
+    url(r'^(?P<username>[0-9a-zA-Z]+)/', 'gitpage.views.get_profile')
 ]
