@@ -1,0 +1,75 @@
+/** {border:1px solid red}*/
+
+
+body{
+	font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans,
+			clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333;
+    background-color: #fff;
+    margin: 40px 80px; padding:0px;
+    /*text-align:center;*/
+
+}
+
+a {
+	text-decoration: None;
+	color: #0094DE;
+}
+a:visited {
+	text-decoration: none;
+	color: #0094DE;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.repo_box {
+	border-top:	1px solid #eee;
+	border-bottom: 1px solid #eee;
+	list-style: none;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.box1 {
+	display: inline-block;
+	width: 10%;
+	height: 100px;
+	margin: 5%;
+	font-size: 30px;
+}
+
+.box2 {
+	display: inline-block;
+	width: 60%;
+	height: 100px;
+	margin: 3%;
+}
+
+.update_box{
+	padding: 10px;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.name-box1{
+	padding: 10px;
+}
+
+.small-box1{
+	padding: 10px;
+	border-top:	1px solid #eee;
+	border-bottom: 1px solid #eee;
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+
+.prf_img {
+	border-radius: 25px;
+	height: 230px;
+	width: 230px;
+}
+
+

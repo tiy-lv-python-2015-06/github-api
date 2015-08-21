@@ -1,0 +1,47 @@
+{#{% extends 'base.html' %}#}
+{% load bootstrap3 %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+{#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+{#    <title></title>#}
+</head>
+<body>
+
+    <header></header>
+        <div class ='box1'>
+           <div>
+               <img src="{{ profile_info.avatar_url }}" class="prf_img">
+           </div>
+            <div class="name-box1">
+                {{ profile_info.login }}
+            </div>
+            <div class="small-box1">
+
+                Joined on:  Jan 3, 2014
+            </div>
+        </div>
+
+        <div class ='box2'>
+            <ul>
+                {% for each_repo in profile_repo %}
+                    <div class="repo_box">
+                        <li>
+                            <a href="{{ repo.url }}">
+                                {{ each_repo.name }}</a><br>
+
+                            <div class="update_box">
+                                {{ each_repo.description }}<br>
+                                Updated: {{ each_repo.updated_at }}
+                            </div>
+                        </li>
+                    </div>
+                {% endfor %}
+              </ul>
+        </div>
+</body>
+</html>
