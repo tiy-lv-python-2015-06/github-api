@@ -11,20 +11,23 @@
 <div class="profile">
     <div class="left-bar">
         <img src="{{ avatar_url }}" alt="Avatar" id="avatar">
-        <span id="name">{{ name }}</span>
-        <ul>
+        <div class="border-bottom">
+            <span class="name">{{ name }}</span>
+            <span class="name" id="login">{{ login }}</span>
+        </div>
+        <ul id="info">
             <li>{{ location }}</li>
             <li>{{ email }}</li>
             <li>{{ html_url }}</li>
+
         </ul>
     </div>
-    <div id="repos">
+    <div class="repos">
     {% for repo in repo_detail %}
-        <div>
-        {{ repo.description }}
-        {{ repo.full_name }}
-        {{ repo.updated_at }}
-        {{ repo.url }}
+        <div class="repo">
+            <a href="{{ repo.url }}" class="repo-name">{{ repo.name }}</a>
+            <span class="repo-description">{{ repo.description }}</span>
+            <span class="repo-updated">{{ repo.updated_at }}</span>
         </div>
     {% endfor %}
     </div>
