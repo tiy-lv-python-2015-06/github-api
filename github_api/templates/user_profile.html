@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/site-style.css' %}"/>
+    <title></title>
+</head>
+<body>
+<div class="profile">
+    <div class="left-bar">
+        <img src="{{ avatar_url }}" alt="Avatar" id="avatar">
+        <div class="border-bottom">
+            <span class="name">{{ name }}</span>
+            <span class="name" id="login">{{ login }}</span>
+        </div>
+        <ul id="info">
+            <li>{{ location }}</li>
+            <li>{{ email }}</li>
+            <li>{{ html_url }}</li>
+
+        </ul>
+    </div>
+    <div class="repos">
+    {% for repo in repo_detail %}
+        <div class="repo">
+            <a href="{{ repo.url }}" class="repo-name">{{ repo.name }}</a>
+            <span class="repo-description">{{ repo.description }}</span>
+            <span class="repo-updated">{{ repo.updated_at }}</span>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
